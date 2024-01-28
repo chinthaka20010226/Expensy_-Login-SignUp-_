@@ -1,6 +1,11 @@
 import React from 'react';
 import '../Style/LoginSignUp.css';
 
+import user_icon from '../Assets/person.png';
+import email_icon from '../Assets/email.png';
+import password_icon from '../Assets/password.png';
+import con_password_icon from '../Assets/password.png';
+
 function LoginSignUp(){
     return(
         <div className='container'>
@@ -14,19 +19,19 @@ function LoginSignUp(){
                             </div>
                             <div className='inputs-section'>
                                 <div className='input'>
-                                    {/* { ***** } */}
+                                    <img src={user_icon} alt='user icon' className='input-icon'></img>
                                     <input type='text' placeholder='Name'></input>
                                 </div>
                                 <div className='input'>
-                                    {/* { ***** } */}
+                                    <img src={email_icon} alt='email icon' className='input-icon'></img>
                                     <input type='email' placeholder='Email'></input>
                                 </div>
                                 <div className='input'>
-                                    {/* { ***** } */}
+                                    <img src={password_icon} alt='password icon' className='input-icon'></img>
                                     <input type='password' placeholder='Password'></input>
                                 </div>
                                 <div className='input'>
-                                    {/* { ***** } */}
+                                    <img src={con_password_icon} alt='confirm password icon' className='input-icon'></img>                    
                                     <input type='password' placeholder='Confirm Password'></input>
                                 </div>
                             </div>
