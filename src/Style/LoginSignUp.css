@@ -1,0 +1,13 @@
+/* ------ Setup Variables ------ */
+:root {
+    --c-primary: #00aeff;
+    --c-black: #000000;
+    --c-white: #ffffff;
+}
+
+/* ------ Global ------ */
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: 0;
+}
