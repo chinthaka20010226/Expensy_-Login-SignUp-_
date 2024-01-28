@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../Style/LoginSignUp.css';
 
 import user_icon from '../Assets/person.png';
@@ -7,46 +7,43 @@ import password_icon from '../Assets/password.png';
 import con_password_icon from '../Assets/password.png';
 
 function LoginSignUp(){
+
+    const[action, setAction] = useState('Sign Up');
+
     return(
-        <div className='container'>
-            <div className='row'>
-                <div className='col'>
+        <div className='container_ vh-100'>
+            <div className='row h-100'>
+                <div className='col d-flex justify-content-center align-items-center h-100'>
                     <div className='card'>
-                        <div className='card-body'>                                                                       
-                            <div className='top-section'>
-                                <h1 className='top-title'>Sign Up</h1>
-                                <div className='text-underline'></div>
+                        <div className='card-body d-flex flex-column justify-content-center'>                                                         
+                            <div className='top-section d-flex flex-column align-items-center justify-content-center'>
+                                <h1 className='top-title'>{action}</h1>
+                                <div className='top-text-underline'></div>
                             </div>
-                            <div className='inputs-section'>
+                            <div className='inputs-section d-flex flex-column align-items-center justify-content-center w-100'>
                                 <div className='input'>
                                     <img src={user_icon} alt='user icon' className='input-icon'></img>
-                                    <input type='text' placeholder='Name'></input>
+                                    <input type='text' placeholder='Name' className='input-field'></input>
                                 </div>
                                 <div className='input'>
                                     <img src={email_icon} alt='email icon' className='input-icon'></img>
-                                    <input type='email' placeholder='Email'></input>
+                                    <input type='email' placeholder='Email' className='input-field'></input>
                                 </div>
                                 <div className='input'>
                                     <img src={password_icon} alt='password icon' className='input-icon'></img>
-                                    <input type='password' placeholder='Password'></input>
+                                    <input type='password' placeholder='Password' className='input-field'></input>
                                 </div>
                                 <div className='input'>
                                     <img src={con_password_icon} alt='confirm password icon' className='input-icon'></img>                    
-                                    <input type='password' placeholder='Confirm Password'></input>
+                                    <input type='password' placeholder='Confirm Password' className='input-field'></input>
                                 </div>
                             </div>
-                            <div className='lost-password'>
-                                <p>Lost Password ? <span>Click Here</span></p>
+                            <div className='lost-password-section'>
+                                Lost Password ? <span>Click Here</span>
                             </div>
-                            <div className='submit-section'>
-                                <div className='row'>
-                                    <div className='col-6'>
-                                        <div className='Sign-Up'>Sign Up</div>
-                                    </div>
-                                    <div className='col-6'>
-                                        <div className='Sign-Up'>Login</div>
-                                    </div>
-                                </div>
+                            <div className='submit-section d-flex justify-content-center align-items-center mt-3 mb-4 w-100'>
+                                <div className={action === 'Login' ? 'submit gray' : 'submit'}>Sign Up</div>
+                                <div className={action === 'Sign Up' ? 'submit gray' : 'submit'}>Login</div>
                             </div>
                         </div>
                     </div>
