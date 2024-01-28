@@ -1,9 +1,10 @@
 import React from 'react';
+import '../Style/LoginSignUp.css';
 
 function LoginSignUp(){
     return(
-        <div>
-            <h1>Hello...</h1>
+        <div className='container'>
+            
         </div>
     )
 }
